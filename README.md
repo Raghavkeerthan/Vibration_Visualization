@@ -1,92 +1,174 @@
-## Download & Installation
+# Vibration Simulator
 
-The compiled Windows executable is available in the GitHub **Releases** section.
+An interactive **Single Degree of Freedom (SDOF) Vibration Simulator** designed to help students understand and visualize mechanical vibration responses under different operating conditions.
 
-**[Download Vibration Simulator →](../../releases/latest)**
+The simulator provides real-time displacement-versus-time visualization and allows users to study free, forced, damped, and custom vibration systems.
 
-Download the `.exe` file from the latest release and run it on Windows
+---
 
-VIBRATION SIMULATOR - USER GUIDE
+## 🚀 Download
 
-============================================================
-1. IMPORTANT NOTE: FIRST LAUNCH BEHAVIOR (WINDOWS DEFENDER)
-============================================================
+The compiled Windows executable (`.exe`) is available in the **Releases** section.
 
-This simulator is packaged as a standalone executable that includes the complete Python runtime and required scientific libraries (NumPy, SciPy, and Matplotlib).
+👉 **[Download Vibration Simulator](../../releases/latest)**
 
-First Run:
+Download the latest `.exe` file from the release and run it on Windows.
 
-Windows Defender may temporarily pause the extraction process while scanning the application. This may result in the following error message:
+> **Note:** Windows Defender may temporarily scan the application during the first launch. See the [First Launch](#-first-launch--windows-defender) section below if the simulator does not start immediately.
 
-"Failed to start embedded Python interpreter"
+---
 
-Solution:
+## ✨ Features
 
-Simply click OK and launch the .exe file again. Once the initial security scan is complete, the simulator will start normally and launch instantly on all subsequent runs.
+- Interactive SDOF vibration simulation
+- Real-time displacement-versus-time visualization
+- Preconfigured vibration scenarios
+- Custom simulation mode
+- Automatic calculation of system properties
+- End-state analysis
+- Support for free and forced vibration
+- Support for different damping conditions
+- Built using Python and scientific computing libraries
 
-============================================================
-2. USING THE SIMULATOR
-============================================================
+---
 
-Using the simulator is straightforward:
+## 📊 Preconfigured Vibration Cases
 
-1. Select one of the predefined vibration cases.
-2. Press the Play button.
-3. The simulator will generate a live displacement-versus-time plot of the mass response.
-
-PRECONFIGURED VIBRATION CASES
-
-The simulator includes eight standard vibration scenarios with preset parameters:
+The simulator includes **eight predefined vibration scenarios**:
 
 1. Free Spring-Mass Vibration
 2. Free Spring-Mass Critically Damped Vibration
 3. Free Spring-Mass Underdamped Vibration
 4. Free Spring-Mass Overdamped Vibration
-5. Forced Spring-Mass Vibration Below Natural Frequency(< wn)
-6. Forced Spring-Mass Vibration Above Natural Frequency(>wn)
-7. Forced Spring-Mass Damped Vibration Below Natural Frequency(< wn)
-8. Forced Spring-Mass Damped Vibration Above Natural Frequency(>wn)
+5. Forced Spring-Mass Vibration Below Natural Frequency (`ω < ωₙ`)
+6. Forced Spring-Mass Vibration Above Natural Frequency (`ω > ωₙ`)
+7. Forced Spring-Mass Damped Vibration Below Natural Frequency (`ω < ωₙ`)
+8. Forced Spring-Mass Damped Vibration Above Natural Frequency (`ω > ωₙ`)
 
-CUSTOM SIMULATION MODE
+---
 
-A ninth case is available for complete customization.
+## 🛠️ Custom Simulation Mode
 
-Users can specify their own values for:
+A ninth simulation case allows users to define their own system parameters.
 
-- Mass (m)
-- Spring Stiffness (k)
-- Damping Coefficient (c)
-- Force Amplitude (F0)
-- Force Frequency(Hz)
-- Initial Displacement
-- Initial Velocity
-- Simulation Duration (t_end)
+Users can specify:
 
-and other simulation parameters as required.
+- Mass (`m`)
+- Spring stiffness (`k`)
+- Damping coefficient (`c`)
+- Force amplitude (`F₀`)
+- Force frequency
+- Initial displacement
+- Initial velocity
+- Simulation duration (`t_end`)
+- Other simulation parameters
 
-============================================================
-3. SYSTEM PROPERTIES AND END-STATE ANALYSIS
-============================================================
+This allows users to investigate the vibration response of their own SDOF systems.
 
-The System Properties and End State panels are located in the bottom-left section of the application.
+---
 
-As parameters are entered or modified, the simulator automatically computes and displays the following:
+## 📐 System Properties
 
-SYSTEM PROPERTIES
+The simulator automatically calculates the following system properties as parameters are entered or modified:
 
-- Natural Frequency
-- Critical Damping Coefficient
-- Damping Ratio
-- System Classification
-  (Undamped, Underdamped, Critically Damped, or Overdamped)
+- **Natural frequency**
+- **Critical damping coefficient**
+- **Damping ratio**
+- **System classification**
 
-END-STATE RESULTS
+The system is classified as:
 
-For the specified simulation end time (t_end), the simulator calculates:
+- Undamped
+- Underdamped
+- Critically damped
+- Overdamped
 
-- Final Displacement
-- Final Velocity
-- Final Acceleration
+---
 
-All values are updated in real time as input parameters are changed.
+## 📈 End-State Analysis
 
+At the specified simulation end time (`t_end`), the simulator calculates:
+
+- Final displacement
+- Final velocity
+- Final acceleration
+
+These values are automatically updated when the simulation parameters are changed.
+
+---
+
+## ▶️ How to Use
+
+1. Launch the simulator.
+2. Select one of the predefined vibration cases or choose **Custom Simulation**.
+3. Enter or review the required parameters.
+4. Press the **Play** button.
+5. Observe the live displacement-versus-time response.
+6. Modify the parameters to study how the system response changes.
+
+---
+
+## ⚠️ First Launch — Windows Defender
+
+The simulator is packaged as a standalone Windows executable containing the required Python runtime and scientific libraries, including:
+
+- NumPy
+- SciPy
+- Matplotlib
+
+During the **first launch**, Windows Defender may temporarily scan or pause the extraction of the embedded Python environment.
+
+This may result in an error such as:
+
+> `Failed to start embedded Python interpreter`
+
+### Solution
+
+If this occurs:
+
+1. Click **OK** on the error message.
+2. Wait a few seconds for Windows Defender to complete its initial scan.
+3. Launch the `.exe` again.
+
+The simulator should start normally on subsequent launches.
+
+---
+
+## 💻 Source Code
+
+The complete Python source code is included in this repository:
+
+`Source_Code.py`
+
+The executable version is provided through the **GitHub Releases** section.
+
+---
+
+## 🧰 Technologies Used
+
+- **Python**
+- **NumPy**
+- **SciPy**
+- **Matplotlib**
+
+---
+
+## 🎯 Purpose
+
+This simulator was developed as an educational tool for understanding fundamental concepts in mechanical vibrations.
+
+It can be used to visualize how changes in mass, stiffness, damping, forcing frequency, and initial conditions affect the dynamic response of an SDOF system.
+
+---
+
+## 👨‍💻 Author
+
+**N. RaghavaKeerthan Reddy**
+
+M.Tech — Mechanical Engineering
+
+---
+
+## 📄 License
+
+This project is intended primarily for educational and academic purposes.
